@@ -1,0 +1,33 @@
+/* 
+Estilo del Scroll Boton
+*/
+#scrollBtn {
+  z-index: 5;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: grid;
+  background-color: yellow;
+
+  border: 3px solid black;
+  padding: 5px;
+
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+  -webkit-transition: opacity 1s ease-out;
+  -moz-transition: opacity 1s ease-out;
+  -o-transition: opacity 1s ease-out;
+  i {
+    font-size: 30px;
+    color: #000;
+  }
+}
+#scrollBtn:hover {
+  i {
+    color: rgba(0, 0, 0, 0.9);
+
+    border-radius: 50%;
+  }
+}

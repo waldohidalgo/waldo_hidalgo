@@ -1,0 +1,289 @@
+.home_hero {
+  background: rgba(255, 255, 0, 0.4) url("/images/floor-tile.png");
+  background-blend-mode: multiply;
+  padding-block: 3rem;
+}
+.noto_style {
+  font-family: "Noto Serif", serif;
+  font-weight: 700;
+}
+
+.home_title {
+  max-width: 700px;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+  @media screen and (min-width: 768px) {
+    font-size: 2.5rem;
+    line-height: 4.5rem;
+  }
+}
+
+#typewriter_especializaciones {
+  font-size: 1.5rem;
+  color: #000080;
+}
+
+.home {
+  display: flex;
+}
+
+.contenedor_nav {
+  width: 200px;
+  background-color: #eee;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
+}
+.contenedor_contenido {
+  width: 100%;
+  @media screen and (min-width: 768px) {
+    width: calc(100% - 200px);
+  }
+}
+.Typewriter__cursor {
+  color: blue;
+  font-size: 1.5rem;
+}
+/*
+Seccion about me
+*/
+
+.about_me {
+  padding-block: 3rem;
+  background-color: var(--color-section-intermedia);
+}
+.about_me_description {
+  text-align: justify;
+}
+
+.about_me h2 {
+  font-family: var(--font-apercu);
+  font-weight: 700;
+}
+
+/*
+Seccion Estudios
+*/
+.estudios {
+  padding-block: 3rem;
+}
+
+.estudios h2 {
+  font-family: var(--font-apercu);
+  font-weight: 700;
+}
+.estudios_description {
+  padding-left: 0;
+  list-style: none;
+  @media screen and (min-width: 768px) {
+    padding-left: 2rem;
+  }
+}
+.contenedor_estudios_imagen {
+  margin-inline: auto;
+  width: 90%;
+  max-width: 300px;
+}
+.contenedor_estudios_imagen img {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.estudios_item {
+  text-align: justify;
+}
+
+.lugar_estudios {
+  margin-bottom: 0;
+}
+/*
+
+Seccion Proyectos
+*/
+.proyectos {
+  padding-block: 3rem;
+  background-color: var(--color-section-intermedia);
+}
+
+.proyectos h2 {
+  font-family: var(--font-apercu);
+  font-weight: 700;
+}
+
+.proyectos_contenedor {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  @media screen and (min-width: 576px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.proyectos_contenedor_contenido {
+  height: calc(100% - 200px);
+  border: 1px solid black;
+  padding: 1rem;
+}
+.proyectos_contenedor_image {
+  width: 100%;
+  height: 200px;
+  background-color: #fff;
+  position: relative;
+}
+.proyectos_contenedor_image:hover .efecto_contenedor_image {
+  height: 100%;
+}
+
+.efecto_contenedor_image {
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: height 0.2s ease;
+  overflow: hidden;
+  color: white;
+  font-weight: 700;
+}
+
+.efecto_contenedor_image_contenido {
+  width: 100%;
+  position: absolute;
+  top: 40%;
+  text-align: center;
+}
+
+.proyectos_contenedor_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.proyectos_categoria {
+  background-color: black;
+  color: white;
+  width: fit-content;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+.proyectos_titulo {
+  color: black;
+  text-transform: capitalize;
+}
+
+.proyectos_link_repositorio {
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+.proyectos_descripcion {
+  max-height: 8rem;
+  overflow-y: auto;
+}
+
+/*
+Clasificador de Proyectos
+*/
+
+.clasificador_proyectos {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+/*
+
+Seccion skills
+*/
+.skills {
+  padding-block: 3rem;
+}
+.skills h2 {
+  font-family: var(--font-apercu);
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.contenedor_skills {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  @media screen and (min-width: 440px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.skills_item {
+  text-transform: capitalize;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding-top: 1rem;
+}
+
+.skills_item img {
+  display: block;
+  margin-inline: auto;
+}
+
+.skills_item {
+  background-image: url("/images/hoffman.png");
+  font-weight: 700;
+}
+
+/*
+Seccion Certificaciones
+*/
+
+.certificaciones {
+  background-color: var(--color-section-intermedia);
+  padding-block: 3rem;
+}
+.certificaciones_contenedor {
+  height: fit-content;
+}
+.swiper-slide img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background-color: #fffdfd;
+  max-width: 500px;
+}
+.certificacion_nombre {
+  font-family: var(--font-apercu);
+}
+.certificacion_item_contenedor_img {
+  position: relative;
+}
+.efecto_certificacion {
+  position: absolute;
+  width: 100%;
+  height: 0%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  transition: height 0.2s ease;
+  overflow: hidden;
+  color: white;
+  z-index: 0;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-family: "Noto Serif", serif;
+}
+
+.certificacion_item_contenedor_img:hover .efecto_certificacion {
+  height: 50%;
+}

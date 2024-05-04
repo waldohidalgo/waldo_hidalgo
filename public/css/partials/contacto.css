@@ -1,0 +1,72 @@
+.contacto {
+  padding-block: 3rem;
+}
+.contacto_form {
+  max-width: 500px;
+  margin-inline: auto;
+}
+
+.contenedor_contacto_botones {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+#mensaje {
+  resize: none;
+}
+
+.redes {
+  padding-block: 3rem;
+  background-color: var(--color-section-intermedia);
+}
+
+.contenedor_otros_perfiles {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+#icono_github_contacto {
+  filter: grayscale(1);
+}
+.perfil {
+  border-bottom: 2px solid transparent;
+}
+.perfil:hover {
+  border-bottom: 2px solid black;
+}
+.enviando_mail {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: blue;
+  font-weight: 700;
+  display: none;
+}
+.enviando_mail > div {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+
+/* HTML: <div class="loader_sending_mail"></div> */
+.loader_sending_mail {
+  width: 20px;
+  aspect-ratio: 2;
+  --_g: no-repeat radial-gradient(circle closest-side, #000 90%, #0000);
+  background: var(--_g) 0% 50%, var(--_g) 50% 50%, var(--_g) 100% 50%;
+  background-size: calc(100% / 3) 50%;
+  animation: l3 1s infinite linear;
+}
+@keyframes l3 {
+  20% {
+    background-position: 0% 0%, 50% 50%, 100% 50%;
+  }
+  40% {
+    background-position: 0% 100%, 50% 0%, 100% 50%;
+  }
+  60% {
+    background-position: 0% 50%, 50% 100%, 100% 0%;
+  }
+  80% {
+    background-position: 0% 50%, 50% 50%, 100% 100%;
+  }
+}

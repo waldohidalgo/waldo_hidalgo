@@ -1,0 +1,56 @@
+.contenedor_logo img {
+  width: 100%;
+  filter: drop-shadow(3px 10px 1px rgba(0, 0, 0, 0.2));
+}
+.contenedor_logo {
+  padding-block: 1rem;
+  padding-inline: 1rem;
+  background-color: #fff;
+  border: 2px solid black;
+}
+.menu {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+}
+
+.contenedor_nav a,
+.offcanvas-body a {
+  text-decoration: none;
+  color: #000;
+  display: inline-block;
+  width: 100%;
+  padding: 1rem 0 1rem 1rem;
+}
+
+.menu_diploma_contenedor {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.menu_lista {
+  list-style: none;
+  padding-left: 0;
+}
+.menu_lista li {
+  border: 1px solid black;
+}
+
+.menu_lista li:first-child {
+  border-top: 0;
+}
+
+.menu_lista li:hover {
+  background-color: #000;
+  color: #fff;
+  cursor: url("/images/cursor.cur") 16 16, pointer;
+}
+.menu_lista li:hover a {
+  color: #fff;
+}
+.menu_lista li:hover .menu_diploma {
+  filter: invert(1);
+}

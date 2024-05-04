@@ -1,0 +1,120 @@
+.contenedor_icono_hamburguesa {
+  position: fixed;
+  top: 6px;
+  right: 8px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 66px;
+  height: 57px;
+  display: flex;
+  justify-content: center;
+  z-index: 1050;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+#hamburguer_icon {
+  width: 60px;
+  height: 45px;
+  position: fixed;
+  top: 12px;
+  right: 11px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+#hamburguer_icon span {
+  display: block;
+  position: absolute;
+  height: 7px;
+  width: 50%;
+  background: black;
+  opacity: 1;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.25s ease-in-out;
+  -moz-transition: 0.25s ease-in-out;
+  -o-transition: 0.25s ease-in-out;
+  transition: 0.25s ease-in-out;
+}
+
+#hamburguer_icon span:nth-child(even) {
+  left: 50%;
+  border-radius: 0 9px 9px 0;
+}
+
+#hamburguer_icon span:nth-child(odd) {
+  left: 0px;
+  border-radius: 9px 0 0 9px;
+}
+
+#hamburguer_icon span:nth-child(1),
+#hamburguer_icon span:nth-child(2) {
+  top: 0px;
+}
+
+#hamburguer_icon span:nth-child(3),
+#hamburguer_icon span:nth-child(4) {
+  top: 18px;
+}
+
+#hamburguer_icon span:nth-child(5),
+#hamburguer_icon span:nth-child(6) {
+  top: 36px;
+}
+
+#hamburguer_icon.open span:nth-child(1),
+#hamburguer_icon.open span:nth-child(6) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#hamburguer_icon.open span:nth-child(2),
+#hamburguer_icon.open span:nth-child(5) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#hamburguer_icon.open span:nth-child(1) {
+  left: 5px;
+  top: 7px;
+}
+
+#hamburguer_icon.open span:nth-child(2) {
+  left: calc(50% - 5px);
+  top: 7px;
+}
+
+#hamburguer_icon.open span:nth-child(3) {
+  left: -50%;
+  opacity: 0;
+}
+
+#hamburguer_icon.open span:nth-child(4) {
+  left: 100%;
+  opacity: 0;
+}
+
+#hamburguer_icon.open span:nth-child(5) {
+  left: 5px;
+  top: 29px;
+}
+
+#hamburguer_icon.open span:nth-child(6) {
+  left: calc(50% - 5px);
+  top: 29px;
+}

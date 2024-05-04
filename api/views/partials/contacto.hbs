@@ -1,0 +1,186 @@
+<section class="contacto" id="contacto">
+  <div class="container">
+    <h2 class="text-center mb-3">Contacto</h2>
+    <form class="contacto_form needs-validation" id="contacto_form" novalidate>
+      <div class="input-group mb-3">
+        <label
+          class="input-group-text bg-primary text-white"
+          id="nombre-addon"
+          for="nombre"
+          >Nombre</label
+        >
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          class="form-control"
+          required
+          placeholder="Ingresa tu Nombre"
+          aria-label="Nombre"
+          aria-describedby="nombre-addon"
+          maxlength="15"
+        />
+        <div class="invalid-feedback">
+          Por favor, ingresa tu Nombre menor a 15 caracteres.
+        </div>
+      </div>
+      <div class="input-group mb-3">
+        <label
+          for="apellido"
+          class="input-group-text bg-primary text-white"
+          id="apellido-addon"
+          >Apellido</label
+        >
+        <input
+          id="apellido"
+          type="text"
+          name="apellido"
+          class="form-control"
+          required
+          placeholder="Ingresa tu Apellido"
+          aria-label="Apellido"
+          aria-describedby="apellido-addon"
+          maxlength="15"
+        />
+        <div class="invalid-feedback">
+          Por favor, ingresa tu Apellido menor a 15 caracteres.
+        </div>
+      </div>
+      <div class="input-group mb-3">
+        <label
+          class="input-group-text bg-success text-white"
+          id="email-addon"
+          for="email"
+          >Email</label
+        >
+        <input
+          id="email"
+          type="email"
+          name="email"
+          class="form-control"
+          required
+          placeholder="Ingresa tu Email"
+          aria-label="Email"
+          aria-describedby="email-addon"
+          maxlength="50"
+        />
+        <div class="invalid-feedback">Por favor, ingresa tu Email.</div>
+      </div>
+      <div class="input-group mb-3">
+        <label
+          class="input-group-text bg-dark text-white"
+          id="asunto-addon"
+          for="asunto"
+          >Asunto</label
+        >
+        <input
+          id="asunto"
+          type="asunto"
+          name="asunto"
+          class="form-control"
+          required
+          placeholder="Ingresa el asunto"
+          aria-label="Asunto"
+          aria-describedby="asunto-addon"
+          maxlength="50"
+        />
+        <div class="invalid-feedback">
+          Por favor, ingresa el Asunto menor a 50 caracteres.
+        </div>
+      </div>
+      <div>
+        <label for="mensaje" class="text-center d-block mb-3">Mensaje</label>
+        <textarea
+          class="form-control"
+          id="mensaje"
+          name="mensaje"
+          rows="5"
+          required
+          maxlength="300"
+          placeholder="Escribe tu Mensaje"
+        ></textarea>
+        <div class="invalid-feedback">
+          Por favor, escribe tu Mensaje menor a 500 caracteres.
+        </div>
+      </div>
+      <div class="enviando_mail text-center">
+        <div>
+          Enviando Email
+          <div class="loader_sending_mail"></div>
+        </div>
+      </div>
+      <div class="contenedor_contacto_botones">
+        <button
+          type="submit"
+          class="btn btn-primary mt-3"
+          title="Enviar el formulario"
+        >
+          Enviar
+        </button>
+        <button
+          type="reset"
+          class="btn btn-danger mt-3"
+          id="btn_reset_form"
+          title="Limpiar el formulario"
+        >
+          Limpiar
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+<section id="redes" class="redes">
+  <div class="contacto_otros container">
+    <h2 class="text-center my-3">Redes Profesionales y Email</h2>
+    <div class="contenedor_otros_perfiles">
+      <div class="perfil">
+        <a
+          href="http://github.com/waldohidalgo"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="d-inline-block"
+          ><img
+            id="icono_github_contacto"
+            src="/images/github.gif"
+            alt="github"
+            title="Link a mi perfil de Github"
+        /></a>
+      </div>
+      <div class="perfil">
+        <a
+          href="https://www.linkedin.com/in/waldo-hidalgo-oyarce/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="d-inline-block"
+        >
+          <img
+            src="/images/linkedin.gif"
+            alt="linkedin"
+            title="Link a mi perfil de Linkedin"
+        /></a>
+      </div>
+      <div class="perfil">
+        <a
+          href="https://www.instagram.com/waldohidalgooyarce"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="d-inline-block"
+        >
+          <img
+            src="/images/instagram.gif"
+            alt="instragram"
+            title="Link a mi perfil de Instagram"
+        /></a>
+      </div>
+      <div class="perfil">
+        <a
+          href="mailto:whidalgohp@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="d-inline-block"
+          ><i class="bi bi-envelope-at-fill" style="font-size: 48px"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

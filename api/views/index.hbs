@@ -1,0 +1,261 @@
+{{> hamburguer}}
+{{> nav_offcanvas}}
+<main class="home">
+  <nav class="contenedor_nav">
+    {{> menu}}
+  </nav>
+  <div class="contenedor_contenido">
+    <section class="home_hero" id="intro">
+      <div class="container">
+        <h2 class="home_title">
+          Hola, soy
+          <span class="noto_style">Waldo Hidalgo</span>
+          y sean bienvenidos a mi portafolio
+        </h2>
+        <p>
+          A la fecha soy
+          <span id="typewriter_especializaciones" class="noto_style"></span>
+        </p>
+      </div>
+    </section>
+    <section class="about_me" id="about_me">
+      <div class="container">
+        <h2 class="text-center">Sobre mi</h2>
+        <p class="mt-4 about_me_description">
+          El año 2015 me titulé como
+          <span class="noto_style">Ingeniero Civil Industrial</span> y
+          <span class="noto_style"
+            >Licenciado en Ciencias de la Ingeniería</span
+          >
+          en la Universidad de Santiago de Chile. Defraudado de las
+          oportunidades laborales en dicha área, he decidido dedicarme 100% a la
+          programación con miras a la creación de aplicaciones con orientación y
+          posibilidad de negocio. Actualmente, me encuentro profundizando en
+          programación y, en específico, Javascript en diversas plataformas
+          online, libros y becas que me he conseguido.
+        </p>
+      </div>
+    </section>
+    <section class="estudios" id="estudios">
+      <div class="container">
+        <h2 class="text-center">Estudios Profesionales</h2>
+        <ul class="mt-4 estudios_description">
+          <li>
+            <div class="estudios_item">
+              <i class="bi bi-plus-circle-fill"></i>
+              <span class="noto_style">2008- 2015</span>
+              <span>Licenciado en Ciencias de la Ingeniería</span>
+            </div>
+            <p class="noto_style lugar_estudios">
+              Universidad de Santiago de Chile
+            </p>
+            <div class="contenedor_estudios_imagen">
+              <a
+                data-src="/images/estudios/licencia.webp"
+                data-fancybox
+                data-caption="Licenciado en Ciencias de la Ingeniería"
+                ><img
+                  src="/images/estudios/licencia.webp"
+                  alt="licenciado en ciencias de la ingeniería"
+              /></a>
+            </div>
+          </li>
+          <li>
+            <div class="estudios_item">
+              <i class="bi bi-plus-circle-fill"></i>
+              <span class="noto_style">2008 - 2015</span>
+              <span>Ingeniero Civil Industrial</span>
+            </div>
+            <p class="noto_style lugar_estudios">
+              Universidad de Santiago de Chile
+            </p>
+            <p>
+              <span class="noto_style">Tesis:</span>
+              <a
+                href="https://usach.primo.exlibrisgroup.com/discovery/fulldisplay?context=L&vid=56USACH_INST:56USACH_INST&search_scope=MyInst_and_CI&isFrbr=true&tab=Everything&docid=alma990001681020206116"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Aplicación de metodologías de valoración de empresas para la
+                obtención del precio objetivo de la acción de Banco de Chile</a
+              >
+            </p>
+            <div class="contenedor_estudios_imagen">
+              <a
+                data-src="/images/estudios/titulo.webp"
+                data-fancybox
+                data-caption="Titulo Profesional de Ingeniero Civil Industrial"
+              >
+                <img
+                  src="/images/estudios/titulo.webp"
+                  alt="titulo profesional"
+                />
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="proyectos" id="proyectos">
+      <div class="container">
+        <h2 class="text-center">Mis Proyectos</h2>
+        <div class="clasificador_proyectos mt-4">
+          <button class="btn btn-success" id="btn_todos">
+            <i class="bi bi-eye-fill"></i> Mostrar todos
+          </button>
+          <button class="btn btn-dark" id="btn_ocultar">
+            <i class="bi bi-eye-slash-fill"></i> Ocultar Todos
+          </button>
+          <button class="btn btn-primary" id="btn_fullstack">Full Stack</button>
+          <button class="btn btn-secondary" id="btn_front_end">
+            Front End
+          </button>
+        </div>
+        <div class="proyectos_contenedor mt-5">
+          {{#each data.proyectos }}
+          <div class="proyectos_item" data-categoria="{{ this.categoria }}">
+            <div class="proyectos_contenedor_image">
+              <div class="efecto_contenedor_image">
+                <div class="efecto_contenedor_image_contenido">
+                  <a
+                    class="text-center"
+                    href="{{ this.link_proyecto }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Link al Proyecto {{ this.nombre_proyecto }}"
+                    ><i class="bi bi-image-fill"></i> Link al Proyecto</a
+                  >
+                </div>
+              </div>
+              <img
+                src="/images/proyectos/{{{ this.nombre_proyecto }}}.webp"
+                alt="{{ this.nombre_proyecto }}"
+              />
+            </div>
+            <div class="proyectos_contenedor_contenido">
+              <h3 class="proyectos_titulo noto_style">
+                {{ this.nombre_proyecto }}
+              </h3>
+              <h4
+                class="proyectos_categoria noto_style"
+                title="Categoria: {{ this.categoria }}"
+              >
+                {{ this.categoria }}
+              </h4>
+              <p class="proyectos_descripcion">{{ this.descripcion }}</p>
+              <p>
+                <a
+                  class="proyectos_link_repositorio"
+                  href="{{ this.link_repositorio }}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Repositorio del Proyecto {{ this.nombre_proyecto }}"
+                  ><i class="bi bi-github"></i> Repositorio</a
+                >
+              </p>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+      </div>
+    </section>
+    <section class="skills" id="skills">
+      <div class="container">
+        <h2 class="text-center">Skills</h2>
+        <article class="skills_article">
+          <h3 class="text-center mb-5">Front End</h3>
+          <div class="contenedor_skills">
+            {{#each data.frontend}}
+            <div class="skills_item">
+              <img
+                width="100"
+                height="100"
+                src="/images/skills/{{{ this }}}.webp"
+                alt="{{{ this }}}"
+              />
+              <p class="text-center">{{{ this }}}</p>
+            </div>
+            {{/each}}
+          </div>
+        </article>
+        <article class="skills_article">
+          <h3 class="text-center my-5">Back End</h3>
+          <div class="contenedor_skills">
+            {{#each data.backend}}
+            <div class="skills_item">
+              <img
+                width="100"
+                height="100"
+                src="/images/skills/{{{ this }}}.webp"
+                alt="{{{ this }}}"
+              />
+              <p class="text-center">{{{ this }}}</p>
+            </div>
+            {{/each}}
+          </div>
+        </article>
+        <article class="skills_article">
+          <h3 class="text-center my-5">Data Analysis</h3>
+          <div class="contenedor_skills">
+            {{#each data.data_analysis}}
+            <div class="skills_item">
+              <img
+                width="100"
+                height="100"
+                src="/images/skills/{{{ this }}}.webp"
+                alt="{{{ this }}}"
+              />
+              <p class="text-center">{{{ this }}}</p>
+            </div>
+            {{/each}}
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="certificaciones" id="certificaciones">
+      <div class="container">
+        <h2 class="text-center mb-3">Certificaciones</h2>
+        <div class="certificaciones_contenedor">
+          <div class="swiper swiperCertificaciones">
+            <div class="swiper-wrapper">
+              {{#each data.certificaciones}}
+              <div class="certificaciones_item swiper-slide">
+                <div class="certificacion_item_contenedor_img">
+                  <a
+                    data-src="/images/certificaciones/{{{ this.nombre }}}.webp"
+                    data-fancybox
+                    data-caption="{{{ this.nombre }}}"
+                  >
+                    <div class="efecto_certificacion">
+                      <p>
+                        <i class="bi bi-zoom-in"></i> Haz click aquí para
+                        ampliar
+                      </p>
+                    </div>
+                  </a>
+
+                  <img
+                    src="/images/certificaciones/{{{ this.nombre }}}.webp"
+                    alt="{{{ this.nombre }}}"
+                  />
+                </div>
+                <p class="noto_style">Institución: {{ this.origen }}</p>
+                <p class="certificacion_nombre">
+                  <i class="bi bi-mortarboard-fill"></i> {{{ this.nombre }}}
+                </p>
+                <p class="noto_style">
+                  Fecha de obtención: {{formatDate this.fecha_obtencion }}
+                </p>
+              </div>
+              {{/each}}
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    {{> contacto}}
+    {{> footer}}
+  </div>
+</main>
