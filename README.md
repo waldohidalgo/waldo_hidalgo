@@ -1,8 +1,8 @@
 # Mi Portfolio FullStack
 
-Portafolio fullstack desarrollado para recopilar todos los proyectos y logros profesionales conseguidos hasta el la fecha mayo año 2024. Mi portafolio recopila todo lo aprendido en el bootcamp **Desarrollo de aplicaciones Full Stack Javascript Trainee** el cual es una beca dada por Talento Digital para Chile y el cual fue dictado por Desafío Latam entre enero y mayo del año 2024.
+Portafolio fullstack desarrollado para recopilar todos los proyectos y logros profesionales conseguidos hasta la fecha mayo año 2024. Mi portafolio recopila todo lo aprendido en el bootcamp **Desarrollo de aplicaciones Full Stack Javascript Trainee** el cual es una beca dada por Talento Digital para Chile y el cual fue dictado por Desafío Latam entre enero y mayo del año 2024.
 
-El portafolio fullstack contiene validación recaptcha del formulario de contacto y se envía un email a la dirección de email ingresada con copia a mi casilla de email.
+El portafolio fullstack contiene validación recaptcha del formulario de contacto y se envía un email a la dirección de email ingresada con copia a mi casilla de email personal.
 
 ## Tabla de Contenido
 
