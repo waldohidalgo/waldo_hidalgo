@@ -1,5 +1,6 @@
 import postContactoQuery from "../queries/postContacto.query.js";
 import transporter from "../config/nodemailer.js";
+
 export default async function postContacto(req, res) {
   const { nombre, apellido, email, asunto, mensaje } = req.body;
 

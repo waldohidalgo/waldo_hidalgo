@@ -43,6 +43,7 @@ $(function () {
             formJQuery.removeClass("was-validated");
             contenedor_contacto_botones.show();
             enviandoMail.hide();
+            grecaptcha.reset();
           });
           return;
         }
@@ -55,6 +56,20 @@ $(function () {
           }).then(() => {
             contenedor_contacto_botones.show();
             enviandoMail.hide();
+            grecaptcha.reset();
+          });
+          return;
+        }
+        if (response.status === 401) {
+          const { error } = await response.json();
+          Swal.fire({
+            title: "Error!",
+            text: error,
+            icon: "error",
+          }).then(() => {
+            contenedor_contacto_botones.show();
+            enviandoMail.hide();
+            grecaptcha.reset();
           });
           return;
         }
@@ -68,6 +83,7 @@ $(function () {
         }).then(() => {
           contenedor_contacto_botones.show();
           enviandoMail.hide();
+          grecaptcha.reset();
         });
       }
     }
