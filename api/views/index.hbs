@@ -242,13 +242,22 @@
                     alt="{{{ this.nombre }}}"
                   />
                 </div>
-                <p class="noto_style">Institución: {{ this.origen }}</p>
-                <p class="certificacion_nombre">
-                  <i class="bi bi-mortarboard-fill"></i> {{{ this.nombre }}}
-                </p>
-                <p class="noto_style">
-                  Fecha de obtención: {{formatDate this.fecha_obtencion }}
-                </p>
+                <div class="certificacion_item_contenedor_texto">
+                  <p class="noto_style">Institución: {{ this.origen }}</p>
+                  <p class="certificacion_nombre">
+                    <i class="bi bi-mortarboard-fill"></i> {{{ this.nombre }}}
+                  </p>
+                  <p class="noto_style">
+                    Fecha de obtención: {{formatDate this.fecha_obtencion }}
+                  </p>
+                  <a
+                    href="{{ this.url_validacion }}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="certificacion_url_validacion"
+                    >URL de Validación del Certificado</a
+                  >
+                </div>
               </div>
               {{/each}}
             </div>

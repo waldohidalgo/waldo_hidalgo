@@ -6,6 +6,17 @@ El portafolio fullstack contiene validación recaptcha del formulario de contact
 
 ## Tabla de Contenido
 
+- [Mi Portfolio FullStack](#mi-portfolio-fullstack)
+  - [Tabla de Contenido](#tabla-de-contenido)
+  - [Librerías utilizadas](#librerías-utilizadas)
+  - [Screenshots](#screenshots)
+    - [1. Screenshots Página Home](#1-screenshots-página-home)
+      - [1.1. Pantallas grandes](#11-pantallas-grandes)
+      - [1.2. Pantallas pequeñas](#12-pantallas-pequeñas)
+    - [2. Screenshots Página 404](#2-screenshots-página-404)
+      - [2.1. Pantallas grandes](#21-pantallas-grandes)
+      - [2.2. Pantallas pequeñas](#22-pantallas-pequeñas)
+
 ## Librerías utilizadas
 
 | Nombre de Librería |
