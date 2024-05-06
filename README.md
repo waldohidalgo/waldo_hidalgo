@@ -33,7 +33,7 @@ El portafolio fullstack contiene validación recaptcha del formulario de contact
 | sweetalert2        |
 | fancybox           |
 
-Además utilizo una base de datos [Neon postreSQL](https://neon.tech/)
+Además utilizo una base de datos [Neon postgreSQL](https://neon.tech/)
 
 ## Screenshots
 
