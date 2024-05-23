@@ -22,6 +22,7 @@ export default async function postContacto(req, res) {
       html: `<h2>El correo ha sido enviado correctamente 🎉</h2>
           <p>Mensaje: ${mensaje}</p>`,
     });
+    console.log(info);
     if (response.length > 0 && info) {
       console.log("El correo se envió correctamente");
       res.status(200).json({ ok: true });
