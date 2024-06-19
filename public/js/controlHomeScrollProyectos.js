@@ -39,7 +39,9 @@ $(function () {
   const loadMoreBtn = document.getElementById("btn_cargar_mas_proyectos");
   async function fetchProyectos(page) {
     try {
-      const response = await fetch(`/api/proyectos?page=${page}`);
+      const response = await fetch(
+        `https://api-portfolio-beige.vercel.app/api/proyectos?page=${page}`
+      );
       const data = await response.json();
       const projects = data.results;
       return projects;
