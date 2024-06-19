@@ -35,8 +35,8 @@ $(function () {
   }
 
   let currentPage = 1;
-  const proyectosContainer = document.getElementById("proyectos_contenedor");
-  const loadMoreBtn = document.getElementById("btn_cargar_mas_proyectos");
+  const proyectosContainer = $("#proyectos_contenedor");
+  const loadMoreBtn = $("#btn_cargar_mas_proyectos");
   async function fetchProyectos(page) {
     try {
       const response = await fetch(
@@ -44,7 +44,8 @@ $(function () {
       );
       const data = await response.json();
       const projects = data.results;
-      return projects;
+      const isNextPage = data.next;
+      return [projects, isNextPage];
     } catch (error) {
       console.log(error);
       return null;
@@ -53,7 +54,7 @@ $(function () {
 
   function displayProjects(projects) {
     projects.forEach((project) => {
-      proyectosContainer.innerHTML += `<div class="proyectos_item" data-categoria="${project.categoria}">
+      proyectosContainer.append(`<div class="proyectos_item" data-categoria="${project.categoria}">
             <div class="proyectos_contenedor_image">
               <div class="efecto_contenedor_image">
                 <div class="efecto_contenedor_image_contenido">
@@ -95,25 +96,27 @@ $(function () {
               </p>
             </div>
           </div>
-        `;
+        `);
     });
   }
 
   async function loadMoreProjects() {
     try {
-      const proyectos = await fetchProyectos(currentPage);
+      const [proyectos, isNextPage] = await fetchProyectos(currentPage);
+
       if (proyectos && proyectos.length > 0) {
         displayProjects(proyectos);
         currentPage++;
         addEventListenersProjects();
-      } else {
-        loadMoreBtn.style.display = "none";
+      }
+      if (!isNextPage) {
+        loadMoreBtn.hide();
       }
     } catch (error) {
       console.log(error);
     }
   }
-  loadMoreBtn.addEventListener("click", loadMoreProjects);
+  loadMoreBtn.on("click", loadMoreProjects);
   loadMoreProjects(); // initial load
 });
 /*
