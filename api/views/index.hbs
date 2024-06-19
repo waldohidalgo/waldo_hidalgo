@@ -118,52 +118,13 @@
             Front End
           </button>
         </div>
-        <div class="proyectos_contenedor mt-5">
-          {{#each data.proyectos }}
-          <div class="proyectos_item" data-categoria="{{ this.categoria }}">
-            <div class="proyectos_contenedor_image">
-              <div class="efecto_contenedor_image">
-                <div class="efecto_contenedor_image_contenido">
-                  <a
-                    class="text-center"
-                    href="{{ this.link_proyecto }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    title="Link al Proyecto {{ this.nombre_proyecto }}"
-                    ><i class="bi bi-image-fill"></i> Link al Proyecto</a
-                  >
-                </div>
-              </div>
-              <img
-                src="/images/proyectos/{{{ this.nombre_proyecto }}}.webp"
-                alt="{{ this.nombre_proyecto }}"
-              />
-            </div>
-            <div class="proyectos_contenedor_contenido">
-              <h3 class="proyectos_titulo noto_style">
-                {{ this.nombre_proyecto }}
-              </h3>
-              <h4
-                class="proyectos_categoria noto_style"
-                title="Categoria: {{ this.categoria }}"
-              >
-                {{ this.categoria }}
-              </h4>
-              <p class="proyectos_descripcion">{{ this.descripcion }}</p>
-              <p>
-                <a
-                  class="proyectos_link_repositorio"
-                  href="{{ this.link_repositorio }}"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title="Repositorio del Proyecto {{ this.nombre_proyecto }}"
-                  ><i class="bi bi-github"></i> Repositorio</a
-                >
-              </p>
-            </div>
-          </div>
-          {{/each}}
-        </div>
+        <div class="proyectos_contenedor mt-5" id="proyectos_contenedor"></div>
+        <button
+          class="btn btn-primary mx-auto d-block mt-3"
+          id="btn_cargar_mas_proyectos"
+        >
+          Cargar Más...
+        </button>
       </div>
     </section>
     <section class="skills" id="skills">
@@ -244,6 +205,7 @@
                   <img
                     src="/images/certificaciones/{{{ this.nombre }}}.webp"
                     alt="{{{ this.nombre }}}"
+                    loading="lazy"
                   />
                 </div>
                 <div class="certificacion_item_contenedor_texto">

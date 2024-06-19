@@ -15,26 +15,6 @@ $(function () {
     // Your custom options
   });
 
-  const allCategories = $("[data-categoria]");
-  const fullStackCategory = $("[data-categoria='fullstack']");
-  const frontEndCategory = $("[data-categoria='front end']");
-
-  $("#btn_todos").on("click", function () {
-    allCategories.show();
-  });
-
-  $("#btn_fullstack").on("click", function () {
-    allCategories.show();
-    frontEndCategory.hide();
-  });
-  $("#btn_front_end").on("click", function () {
-    allCategories.show();
-    fullStackCategory.hide();
-  });
-  $("#btn_ocultar").on("click", function () {
-    allCategories.hide();
-  });
-
   const swiperCertificaciones = new Swiper(".swiperCertificaciones", {
     slidesPerView: 1,
     spaceBetween: 0,
