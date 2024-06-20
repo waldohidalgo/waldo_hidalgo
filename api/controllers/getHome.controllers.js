@@ -13,9 +13,16 @@ export default async function getHome(req, res) {
           (a, b) => a.fecha_obtencion - b.fecha_obtencion
         ),
         frontend: ["react", "next.js", "redux", "SASS", "bootstrap", "jquery"],
-        backend: ["node.js", "express", "python"],
-        database: ["postgreSQL", "mySQL"],
-        data_analysis: ["power bi", "pandas", "numpy", "matplotlib", "seaborn"],
+        backend: [
+          "node.js",
+          "express",
+          "python",
+          "PostgreSQL",
+          "MongoDB",
+          "MySQL",
+          "chai",
+        ],
+        data_analysis: ["Power BI", "pandas", "numpy", "matplotlib", "seaborn"],
       },
       runtimeOptions: { home: true },
       helpers: {
