@@ -1,12 +1,15 @@
-.contenedor_logo img {
-  width: 100%;
-  filter: drop-shadow(3px 10px 1px rgba(0, 0, 0, 0.2));
-}
 .contenedor_logo {
   padding-block: 1rem;
   padding-inline: 1rem;
   background-color: #fff;
+  height: fit-content;
   border: 2px solid black;
+}
+
+.contenedor_logo img {
+  width: 100%;
+  aspect-ratio: 820 / 218;
+  filter: drop-shadow(3px 10px 1px rgba(0, 0, 0, 0.2));
 }
 .menu {
   height: 100vh;
