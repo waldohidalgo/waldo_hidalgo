@@ -214,17 +214,11 @@ Seccion skills
 
 .contenedor_skills {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
   align-items: center;
-}
-
-@media screen and (min-width: 440px) {
-  .contenedor_skills {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
 }
 
 .skills_item {
