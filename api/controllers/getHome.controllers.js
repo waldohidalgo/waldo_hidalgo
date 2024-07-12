@@ -12,7 +12,16 @@ export default async function getHome(req, res) {
         certificaciones: certificaciones.sort(
           (a, b) => a.fecha_obtencion - b.fecha_obtencion
         ),
-        frontend: ["react", "next.js", "redux", "SASS", "bootstrap", "jquery"],
+        frontend: [
+          "react",
+          "vue",
+          "next.js",
+          "redux",
+          "SASS",
+          "bootstrap",
+          "jquery",
+          "tailwindCSS",
+        ],
         backend: [
           "node.js",
           "express",
