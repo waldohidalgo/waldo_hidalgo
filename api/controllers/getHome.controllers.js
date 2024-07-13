@@ -1,14 +1,22 @@
 import path from "path";
 import getProyectosQuery from "../queries/getProyectos.query.js";
 import getCertifications from "../queries/getCertifications.query.js";
+
+// ruta API para mostrar la primera pagina de proyectos
+
+const projectsAPI =
+  "https://api-portfolio-beige.vercel.app/api/proyectos?page=1";
 export default async function getHome(req, res) {
   try {
-    const proyectos = await getProyectosQuery();
     const certificaciones = await getCertifications();
+
+    const responseProjectsAPI = await fetch(projectsAPI);
+    const projectsPageData = await responseProjectsAPI.json();
+    const projectsFirstPage = projectsPageData.results;
 
     res.render(path.resolve("api", "views", "index.hbs"), {
       data: {
-        proyectos,
+        proyectos: projectsFirstPage,
         certificaciones: certificaciones.sort(
           (a, b) => a.fecha_obtencion - b.fecha_obtencion
         ),

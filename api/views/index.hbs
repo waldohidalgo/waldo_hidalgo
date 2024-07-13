@@ -103,7 +103,10 @@
       <div class="container">
         <h2 class="text-center">Mis Proyectos</h2>
         <p class="text-center">
-           Mis proyectos estan desplegados a la web en diversas plataformas ya sea Github Pages, Vercel o Render, por ejemplo. Mis proyectos cargan inmediatamente a excepción de Render en el cual el tiempo de carga es de al menos 50 segundos luego de un período de inactividad.
+          Mis proyectos estan desplegados a la web en diversas plataformas ya
+          sea Github Pages, Vercel o Render, por ejemplo. Mis proyectos cargan
+          inmediatamente a excepción de Render en el cual el tiempo de carga es
+          de al menos 50 segundos luego de un período de inactividad.
         </p>
         <div class="clasificador_proyectos mt-4">
           <button class="btn btn-success" id="btn_todos">
@@ -117,13 +120,56 @@
             Front End
           </button>
         </div>
-        <div class="proyectos_contenedor mt-5" id="proyectos_contenedor"></div>
-        <div class="text-center"><button
-          class="btn btn-primary mt-3"
-          id="btn_cargar_mas_proyectos"
-        >
-          Cargar Más...
-        </button>
+        <div class="proyectos_contenedor mt-5" id="proyectos_contenedor">
+          {{#each data.proyectos}}
+          <div class="proyectos_item" data-categoria="{{{ this.categoria }}}">
+            <div class="proyectos_contenedor_image">
+              <div class="efecto_contenedor_image">
+                <div class="efecto_contenedor_image_contenido">
+                  <a
+                    class="text-center"
+                    href="{{{ this.link_proyecto}}}"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Link al Proyecto {{{this.nombre_proyecto}}}"
+                    ><i class="bi bi-image-fill"></i> Link al Proyecto</a
+                  >
+                </div>
+              </div>
+              <img
+                src="/images/proyectos/{{{this.nombre_proyecto}}}.webp"
+                alt="{{{this.nombre_proyecto}}}"
+              />
+            </div>
+            <div class="proyectos_contenedor_contenido">
+              <h3 class="proyectos_titulo noto_style">
+                {{ this.nombre_proyecto }}
+              </h3>
+              <h4
+                class="proyectos_categoria noto_style"
+                title="Categoria: {{{this.categoria}}}"
+              >
+                {{{this.categoria}}}
+              </h4>
+              <p class="proyectos_descripcion">{{{this.descripcion}}}</p>
+              <p>
+                <a
+                  class="proyectos_link_repositorio"
+                  href="{{{this.link_repositorio}}}"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Repositorio del Proyecto {{{this.nombre_proyecto}}}"
+                  ><i class="bi bi-github"></i> Repositorio</a
+                >
+              </p>
+            </div>
+          </div>
+          {{/each}}
+        </div>
+        <div class="text-center">
+          <button class="btn btn-primary mt-3" id="btn_cargar_mas_proyectos">
+            Cargar Más...
+          </button>
         </div>
       </div>
     </section>

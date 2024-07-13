@@ -117,7 +117,6 @@ $(function () {
     }
   }
   loadMoreBtn.on("click", loadMoreProjects);
-  loadMoreProjects(); // initial load
 });
 /*
 {{#each data.proyectos }}
