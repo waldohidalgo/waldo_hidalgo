@@ -34,7 +34,7 @@ $(function () {
     $("#btn_ocultar").on("click", hideAllProjects);
   }
 
-  let currentPage = 1;
+  let currentPage = 2;
   const proyectosContainer = $("#proyectos_contenedor");
   const loadMoreBtn = $("#btn_cargar_mas_proyectos");
   async function fetchProyectos(page) {
