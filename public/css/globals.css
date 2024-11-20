@@ -23,10 +23,12 @@ body {
   box-sizing: border-box;
 }
 
-a {
+a,
+button {
   text-decoration: none;
   color: inherit;
-  cursor: url("/images/cursor.cur") 16 16, pointer;
+  display: inline-block;
+  cursor: url("/images/cursor.cur") 16 16, pointer !important;
 }
 
 a:hover {
