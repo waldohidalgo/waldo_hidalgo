@@ -204,6 +204,17 @@ Clasificador de Proyectos
   gap: 5px;
   flex-wrap: wrap;
 }
+.categoria_seleccionada {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.categoria_seleccionada span {
+  font-weight: 700;
+  background-color: white;
+  padding: 5px;
+  border: 1px solid black;
+}
 
 /*
 
