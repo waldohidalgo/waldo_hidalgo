@@ -1,37 +1,41 @@
 $(function () {
+  addEventListenersProjects();
+  let categoria = "all";
   function addEventListenersProjects() {
     const allCategories = $("[data-categoria]");
     const fullStackCategory = $("[data-categoria='fullstack']");
     const frontEndCategory = $("[data-categoria='front end']");
 
     function showAllprojects() {
+      categoria = "all";
+      //console.log("mostrando todos los proyectos");
       allCategories.show();
     }
     function showFullStackProjects() {
+      categoria = "fullstack";
       allCategories.show();
       frontEndCategory.hide();
     }
 
     function showFrontEndProjects() {
+      categoria = "frontend";
       allCategories.show();
       fullStackCategory.hide();
     }
 
     function hideAllProjects() {
+      categoria = "";
       allCategories.hide();
     }
     //remover el event listener
-    $("#btn_todos").off("click", showAllprojects);
-    $("#btn_todos").on("click", showAllprojects);
 
-    $("#btn_fullstack").off("click", showFullStackProjects);
-    $("#btn_fullstack").on("click", showFullStackProjects);
+    $("#btn_todos").off("click").on("click", showAllprojects);
 
-    $("#btn_front_end").off("click", showFrontEndProjects);
-    $("#btn_front_end").on("click", showFrontEndProjects);
+    $("#btn_fullstack").off("click").on("click", showFullStackProjects);
 
-    $("#btn_ocultar").off("click", hideAllProjects);
-    $("#btn_ocultar").on("click", hideAllProjects);
+    $("#btn_front_end").off("click").on("click", showFrontEndProjects);
+
+    $("#btn_ocultar").off("click").on("click", hideAllProjects);
   }
 
   let currentPage = 2;
@@ -101,6 +105,7 @@ $(function () {
   }
 
   async function loadMoreProjects() {
+    //console.log(categoria);
     try {
       const [proyectos, isNextPage] = await fetchProyectos(currentPage);
 
