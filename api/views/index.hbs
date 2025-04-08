@@ -34,10 +34,18 @@
           en la Universidad de Santiago de Chile. Defraudado de las
           oportunidades laborales en dicha área, he decidido dedicarme 100% a la
           programación con miras a la creación de aplicaciones con orientación y
-          posibilidad de negocio. Actualmente, me encuentro profundizando en
-          programación y, en específico, Javascript en diversas plataformas
-          online, libros y becas que me he conseguido.
+          posibilidad de negocio. Actualmente, trabajo como:
         </p>
+        <ul>
+          <li>
+            Desarrollador de Reportes utilizando Power BI (Desktop y Service
+            junto con Azure) y Looker Studio (BigQuery)
+          </li>
+          <li>
+            Desarrollador de aplicaciones web Full Stack utilizando Next.js,
+            Firebase y Google Cloud
+          </li>
+        </ul>
         <div style="display: flex; justify-content: center">
           <div
             class="badge-base LI-profile-badge"
@@ -131,7 +139,9 @@
             Front End
           </button>
         </div>
-        <div class="categoria_seleccionada">Categoría Seleccionada: <span id="categoria_seleccionada"></span></div>
+        <div class="categoria_seleccionada">
+          Categoría Seleccionada: <span id="categoria_seleccionada"></span>
+        </div>
         <div class="proyectos_contenedor mt-5" id="proyectos_contenedor">
           {{#each data.proyectos}}
           <div class="proyectos_item" data-categoria="{{{ this.categoria }}}">
