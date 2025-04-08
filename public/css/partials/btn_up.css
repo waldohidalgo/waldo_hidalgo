@@ -4,6 +4,7 @@ Estilo del Scroll Boton
 #scrollBtn {
   z-index: 5;
   position: fixed;
+  width: 60px;
   bottom: 20px;
   right: 20px;
   display: grid;
